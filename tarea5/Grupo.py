@@ -20,24 +20,20 @@ class Grupo:
             print( f"El estudiante {estudiante} ya está en el grupo")
 
     def eliminar_estudiante(self, matricula):
-        estudiante_encontrado = None
         for estudiante in self.__estudiantes:
             if estudiante.matricula == matricula:
-                estudiante_encontrado = estudiante
-                break
-        
-        if estudiante_encontrado:
-            self.__estudiantes.remove(estudiante_encontrado)
-            print(f"Estudiante {matricula} eliminado correctamente.")
-        else:
-            print(f"No se encontró un estudiante con matrícula {matricula} en el grupo")
+                self.__estudiantes.remove(estudiante)
+                print(f"Estudiante {matricula} eliminado correctamente.")
+                return 
+        print(f"No se encontró un estudiante con matrícula {matricula} en el grupo")
 
     def __str__(self):
-        mostrar_grupo= (f"Grupo número: {self.__numero_grupo}\n"
-                f"{self.__asignatura}\n"
-                f"{self.__profesor}\n"
-                f"Estudiantes:{self.__estudiantes}")
+        mostrar_grupo = (f"Grupo número: {self.__numero_grupo}\n"
+                         f"La asignatura: {self.__asignatura}\n"
+                         f"Profesor: {self.__profesor}\n"
+                         f"Estudiantes:\n" + "\n".join(str(estudiante) for estudiante in self.__estudiantes))
         return mostrar_grupo
+
 
     @property
     def numero_grupo(self):

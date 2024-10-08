@@ -8,7 +8,7 @@ class Asignatura:
         Asignatura.__contador_asignaturas+=1
 
     def __str__(self):
-        mostrar_info= f"La asignatura {self.__nombre} {self.__codigos}, con una cantidad de {self.__creditos} créditos" 
+        mostrar_info= f"{self.__nombre} {self.__codigos}, con una cantidad de {self.__creditos} créditos" 
         return mostrar_info
     
     @property

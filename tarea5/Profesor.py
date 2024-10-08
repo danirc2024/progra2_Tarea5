@@ -12,8 +12,8 @@ class Profesor(Persona):
         return f"El profesor {self.nombre} {self.apellido} enseña {materia}"
     
     def __str__(self):
-        presentación= (f"Yo soy {self.nombre} {self.apellido}, nací el {self.fecha_nacimiento},"
-                       f"Soy el empleado número {self.__numero_empleado} y del departamento de {self.__departamento}")
+        presentación= (f"Profesor {self.nombre} {self.apellido}, nacido el {self.fecha_nacimiento}."
+                       f"Empleado número {self.__numero_empleado} y del departamento de {self.__departamento}")
         return presentación
     
     @property

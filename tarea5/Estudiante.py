@@ -26,7 +26,7 @@ class Estudiante(Persona):
         return f"El estudiante ha estudiado {materia} durante {horas} horas"
      
     def __str__(self):
-        presentacion = (f"Yo soy {self.nombre} {self.apellido}, nací el {self.fecha_nacimiento}, "
+        presentacion = (f"{self.nombre} {self.apellido}, nacido el {self.fecha_nacimiento}, "
                         f"con matrícula {self.__matricula}, en la carrera de {self.__carrera} y en el semestre {self.__semestre}")
         return presentacion
     
