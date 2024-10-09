@@ -25,7 +25,7 @@ class Grupo:
                 self.__estudiantes.remove(estudiante)
                 print(f"Estudiante {matricula} eliminado correctamente.")
                 return 
-        print(f"No se encontró un estudiante con matrícula {matricula} en el grupo")
+        print(f"No se encontró un estudiante con matrícula {matricula} en la sección")
 
     def __str__(self):
         mostrar_grupo = (f"Grupo número: {self.__numero_grupo}\n"
